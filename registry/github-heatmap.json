@@ -1,0 +1,23 @@
+{
+  "name": "github-heatmap",
+  "type": "registry:ui",
+  "dependencies": [
+    "react-activity-calendar",
+    "lucide-react",
+    "date-fns",
+    "next-themes"
+  ],
+  "registryDependencies": [
+    "card",
+    "skeleton",
+    "alert",
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/components/github-heatmap.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

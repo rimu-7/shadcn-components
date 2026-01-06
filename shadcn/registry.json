@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "rimu-ui",
+  "type": "registry",
+  "style": "default",
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  },
+  "dependencies": [],
+  "registry": {
+    "github-heat-map": {
+      "files": [
+        {
+          "path": "components/ui/github-heat-map.tsx",
+          "type": "component"
+        }
+      ],
+      "dependencies": ["react-activity-calendar", "date-fns", "next-themes"]
+    }
+  }
+}
