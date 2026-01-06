@@ -16,8 +16,10 @@
   ],
   "files": [
     {
-      "path": "registry/components/github-heatmap.tsx",
-      "type": "registry:ui"
+      "path": "components/github-heatmap.tsx",
+      "content": "", 
+      "type": "registry:ui",
+      "target": "components/github-heatmap.tsx"
     }
   ]
 }
