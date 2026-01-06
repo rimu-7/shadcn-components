@@ -1,0 +1,16 @@
+{
+  "name": "text-writing-effect",
+  "type": "registry:ui",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/text-writing-effect.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { motion, SVGMotionProps } from \"framer-motion\";\nimport { cn } from \"@/lib/utils\";\n\ninterface TextWritingEffectProps extends SVGMotionProps<SVGSVGElement> {\n  text: string;\n  fontClassName?: string;\n  speed?: number;\n  color?: string;\n  strokeWidth?: number;\n}\n\nexport function TextWritingEffect({\n  text,\n  fontClassName,\n  speed = 2,\n  color = \"currentColor\",\n  strokeWidth = 1.5,\n  className,\n  ...props\n}: TextWritingEffectProps) {\n  const pathLength = 1000;\n\n  return (\n    <div\n      className={cn(\n        \"flex items-center justify-center overflow-hidden w-full h-auto\",\n        className\n      )}\n    >\n      <motion.svg\n        key={`${text}-${fontClassName}`}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        viewBox=\"0 0 800 200\"\n        className=\"w-full h-full overflow-visible\"\n        {...props}\n      >\n        <defs>\n          <linearGradient id=\"textGradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">\n            <stop offset=\"0%\" stopColor={color} stopOpacity=\"1\" />\n            <stop offset=\"100%\" stopColor={color} stopOpacity=\"0.8\" />\n          </linearGradient>\n        </defs>\n\n        {/* Outline / Stroke Animation */}\n        <motion.text\n          x=\"50%\"\n          y=\"50%\"\n          textAnchor=\"middle\"\n          dominantBaseline=\"middle\"\n          className={cn(\"text-7xl fill-transparent\", fontClassName)}\n          style={{ stroke: color }}\n          strokeWidth={strokeWidth}\n          strokeLinecap=\"round\"\n          initial={{\n            strokeDasharray: pathLength,\n            strokeDashoffset: pathLength,\n          }}\n          animate={{\n            strokeDashoffset: 0,\n          }}\n          transition={{\n            duration: speed,\n            ease: \"easeInOut\",\n          }}\n        >\n          {text}\n        </motion.text>\n\n        {/* Fill Animation */}\n        <motion.text\n          x=\"50%\"\n          y=\"50%\"\n          textAnchor=\"middle\"\n          dominantBaseline=\"middle\"\n          className={cn(\"text-7xl stroke-transparent\", fontClassName)}\n          style={{ fill: color }}\n          initial={{ opacity: 0 }}\n          animate={{ opacity: 1 }}\n          transition={{\n            duration: 1,\n            ease: \"easeOut\",\n            delay: speed * 0.6,\n          }}\n        >\n          {text}\n        </motion.text>\n      </motion.svg>\n    </div>\n  );\n}",
+      "type": "registry:ui",
+      "target": "components/ui/text-writing-effect.tsx"
+    }
+  ]
+}
