@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import { GithubHeatMap } from "@/shadcn/components/ui/github-heat-map";
+import { GithubHeatMap } from "@/registry2/new-york/components/github-heatmap";
 
 export default function Home() {
   return (
