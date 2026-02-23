@@ -1,0 +1,103 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "rimu-7/shadcn-components",
+  "version": "1.0.0",
+  "environment": "production",
+  "urls": {
+    "registry": "https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+    "scoped": "https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+    "github": "https://github.com/rimu-7/shadcn-components",
+    "homepage": "https://rimu-7.github.io/shadcn-components"
+  },
+  "installMethods": {
+    "direct": {
+      "title": "Direct Install",
+      "description": "Install with full registry URL (works everywhere)",
+      "command": "npx shadcn@latest add <component> -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+      "examples": {
+        "github-heatmap": "npx shadcn@latest add github-heatmap -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+        "text-writing-effect": "npx shadcn@latest add text-writing-effect -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+        "github-stars": "npx shadcn@latest add github-stars -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json"
+      }
+    },
+    "scoped": {
+      "title": "Scoped Install",
+      "description": "Use @rimu-7 prefix with scoped registry",
+      "command": "npx shadcn@latest add @rimu-7/<component> -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+      "examples": {
+        "github-heatmap": "npx shadcn@latest add @rimu-7/github-heatmap -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+        "text-writing-effect": "npx shadcn@latest add @rimu-7/text-writing-effect -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+        "github-stars": "npx shadcn@latest add @rimu-7/github-stars -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json"
+      }
+    },
+    "init": {
+      "title": "Registry Init (Recommended)",
+      "description": "Initialize project once, then install without -r flag",
+      "steps": [
+        {
+          "step": 1,
+          "command": "npx shadcn@latest init -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+          "description": "Initialize with rimu-7 registry"
+        },
+        {
+          "step": 2,
+          "command": "npx shadcn@latest add <component>",
+          "description": "Install any component"
+        }
+      ],
+      "examples": [
+        "npx shadcn@latest add github-heatmap",
+        "npx shadcn@latest add text-writing-effect",
+        "npx shadcn@latest add github-stars"
+      ]
+    },
+    "config": {
+      "title": "Manual Config",
+      "description": "Add registry to existing components.json",
+      "file": "components.json",
+      "config": {
+        "registries": {
+          "rimu-7": "https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json"
+        }
+      },
+      "command": "npx shadcn@latest add <component>@rimu-7",
+      "examples": [
+        "npx shadcn@latest add github-heatmap@rimu-7",
+        "npx shadcn@latest add text-writing-effect@rimu-7",
+        "npx shadcn@latest add github-stars@rimu-7"
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "github-heatmap",
+      "version": "1.0.0",
+      "description": "GitHub-style contribution graph with activity calendar",
+      "install": {
+        "direct": "npx shadcn@latest add github-heatmap -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+        "scoped": "npx shadcn@latest add @rimu-7/github-heatmap -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+        "shorthand": "npx shadcn@latest add github-heatmap@rimu-7"
+      }
+    },
+    {
+      "name": "text-writing-effect",
+      "version": "2.0.0",
+      "description": "Beautiful SVG text animations with 9 different styles",
+      "install": {
+        "direct": "npx shadcn@latest add text-writing-effect -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+        "scoped": "npx shadcn@latest add @rimu-7/text-writing-effect -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+        "shorthand": "npx shadcn@latest add text-writing-effect@rimu-7"
+      }
+    },
+    {
+      "name": "github-stars",
+      "version": "1.0.0",
+      "description": "Display GitHub repository stars with animated counter",
+      "install": {
+        "direct": "npx shadcn@latest add github-stars -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/index.json",
+        "scoped": "npx shadcn@latest add @rimu-7/github-stars -r https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/scoped.json",
+        "shorthand": "npx shadcn@latest add github-stars@rimu-7"
+      }
+    }
+  ]
+}

@@ -1,6 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "text-writing-effect",
   "type": "registry:ui",
+  "title": "Text Writing Effect",
+  "description": "Beautiful SVG text animations with 9 different styles",
+  "author": "rimu-7",
+  "version": "2.0.0",
   "dependencies": [
     "framer-motion"
   ],
@@ -12,5 +17,11 @@
       "type": "registry:ui",
       "target": "components/ui/text-writing-effect.tsx"
     }
-  ]
+  ],
+  "meta": {
+    "updateCheck": {
+      "url": "https://raw.githubusercontent.com/rimu-7/shadcn-components/main/public/registry/text-writing-effect.json",
+      "versionKey": "version"
+    }
+  }
 }

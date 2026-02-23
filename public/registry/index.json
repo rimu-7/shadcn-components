@@ -1,0 +1,56 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "rimu-7",
+  "homepage": "https://github.com/rimu-7/shadcn-components",
+  "description": "Custom shadcn components by rimu-7",
+  "items": [
+    {
+      "name": "github-heatmap",
+      "type": "registry:ui",
+      "title": "Github Heatmap",
+      "description": "GitHub-style contribution graph with activity calendar",
+      "dependencies": [
+        "react-activity-calendar",
+        "lucide-react",
+        "date-fns",
+        "next-themes"
+      ],
+      "files": [
+        {
+          "path": "components/ui/github-heatmap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-writing-effect",
+      "type": "registry:ui",
+      "title": "Text Writing Effect",
+      "description": "Beautiful SVG text animations with 9 different styles",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/text-writing-effect.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "github-stars",
+      "type": "registry:ui",
+      "title": "Github Stars",
+      "description": "Display GitHub repository stars with animated counter",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/ui/github-stars.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
